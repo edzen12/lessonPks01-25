@@ -18,3 +18,8 @@ print(data)
 #######Генератор списков
 data2 = [i for i in range(100) if i %2==0]
 print(data2)
+
+
+
+
+https://github.com/edzen12/
