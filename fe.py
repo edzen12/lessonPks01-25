@@ -27,17 +27,27 @@ class Tour:
         pass 
     def info(self): #краткая информация о туре. 
         pass 
-    
-# 2. Класс Client
-# Атрибуты:
-# name — имя клиента;
-# balance — баланс клиента.
 
-# Методы:
-# pay(amount) — уменьшает баланс, если хватает денег;
-# add_balance(amount) — пополнение счёта;
-# info() — возвращает строку с именем и балансом.
+class Client:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance 
 
+    def pay(self, amount):
+        if self.balance>=amount:
+            self.balance-=amount
+            return self.balance
+        else:
+            return False
+        
+    def add_balance(self, amount):
+        if amount >0:
+            self.balance += amount
+        else:
+            return False
+        
+    def info(self):
+        return f"Имя: {self.name} Баланс: {self.balance}сом"
 
 # 3. Класс Agency
 # Атрибуты:
